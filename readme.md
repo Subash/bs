@@ -3,6 +3,12 @@ The name also describes my sentiment towards the whole system.
 
 ![GitHub](https://img.shields.io/github/license/subash/bs.svg)
 
+## Installation
+```
+npm install @sbspk/bs
+```
+
+## Usage
 ```javascript
 const { toAD, toBS } = require('@sbspk/bs');
 
