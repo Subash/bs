@@ -1,5 +1,5 @@
 const calendar = require('./calendar.json');
-const CALENDAR_START_DATE = new Date('Tue, 14 Apr 1943 00:00:00');
+const CALENDAR_START_DATE = new Date('Wed, 12 Apr 1893 00:00:00');
 
 exports.toBS = function toBS({ day, month, year }) {
   const date = new Date(year, month - 1, day, 0, 0, 0, 0); // convert month to monthIndex
