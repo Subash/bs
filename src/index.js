@@ -1,8 +1,8 @@
 const calendar = require('./calendar.json');
-const CALENDAR_START_DATE = new Date('Wed, 12 Apr 1893 00:00:00');
+const CALENDAR_START_DATE = Date.UTC(1893, 4 - 1, 12); // month to monthIndex
 
 exports.toBS = function toBS({ day, month, year }) {
-  const date = new Date(year, month - 1, day, 0, 0, 0, 0); // convert month to monthIndex
+  const date = Date.UTC(year, month - 1, day); // month to monthIndex
   if(date < CALENDAR_START_DATE) throw new Error('Unsupported Date');
 
   const difference = Math.round(Math.abs(date - CALENDAR_START_DATE) / (86400 * 1000));
@@ -37,8 +37,8 @@ exports.toAD = function toAD({ day, month, year }) {
         if(day < 1 || day > days) throw new Error(`The month ${year}/${month} has only ${days} days.`)
         totalDays += day;
         let difference = totalDays - 1;
-        const date = new Date(CALENDAR_START_DATE.getTime() + (difference * (86400 * 1000)));
-        return { year: date.getFullYear(), month: date.getMonth() + 1, day: date.getDate() };
+        const date = new Date(CALENDAR_START_DATE + (difference * (86400 * 1000)));
+        return { year: date.getUTCFullYear(), month: date.getUTCMonth() + 1, day: date.getUTCDate() };
       } else {
         totalDays += days;
       }
