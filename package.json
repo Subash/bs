@@ -1,6 +1,6 @@
 {
   "name": "@sbspk/bs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "src/index.js",
   "description": "Convert BS dates to AD or vice versa. The name also describes my sentiment towards the whole system.",
   "repository": {
