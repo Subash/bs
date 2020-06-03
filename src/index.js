@@ -3,7 +3,7 @@ const CALENDAR_START_DATE = Date.UTC(1893, 4 - 1, 12); // month to monthIndex
 
 exports.toBS = function toBS({ day, month, year }) {
   const date = Date.UTC(year, month - 1, day); // month to monthIndex
-  if(date < CALENDAR_START_DATE) throw new Error('Unsupported Date');
+  if(date < CALENDAR_START_DATE) throw new Error(`The date ${year}/${month}/${day} is not supported.`);
 
   const difference = Math.abs(date - CALENDAR_START_DATE) / (86400 * 1000);
   const totalDays =  difference + 1;
@@ -24,11 +24,11 @@ exports.toBS = function toBS({ day, month, year }) {
     }
   }
 
-  throw new Error(`Unsupported Date`)
+  throw new Error(`The date ${year}/${month}/${day} is not supported.`);
 }
 
 exports.toAD = function toAD({ day, month, year }) {
-  if(year < calendar[0][0]) throw new Error('Unsupported Date');
+  if(year < calendar[0][0]) throw new Error(`The date ${year}/${month}/${day} is not supported.`);
 
   let totalDays = 0;
   for([_year, months] of calendar) {
@@ -45,5 +45,5 @@ exports.toAD = function toAD({ day, month, year }) {
     }
   }
 
-  throw new Error('Unsupported Date');
+  throw new Error(`The date ${year}/${month}/${day} is not supported.`);
 }
