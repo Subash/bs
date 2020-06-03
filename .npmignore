@@ -1,0 +1,6 @@
+/.github
+/coverage
+/node_modules
+/tests
+.editorconfig
+.gitattributes

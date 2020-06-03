@@ -1,0 +1,22 @@
+{
+  "name": "@sbspk/bs",
+  "version": "1.0.1",
+  "main": "src/index.js",
+  "description": "Convert BS dates to AD or vice versa. The name also describes my sentiment towards the whole system.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Subash/bs.git"
+  },
+  "author": "Subash Pathak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Subash/bs/issues"
+  },
+  "homepage": "https://github.com/Subash/bs#readme",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
