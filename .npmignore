@@ -1,0 +1,8 @@
+/.github
+/coverage
+/src
+/tests
+.editorconfig
+.prettierrc
+jest.config.js
+tsconfig.json
