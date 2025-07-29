@@ -1,7 +1,7 @@
 import CALENDAR from './calendar';
 
 const CALENDAR_MONTHS = CALENDAR.flatMap((yearRow) => yearRow[1]);
-const START_DATE_CE = Date.UTC(1893, 3, 12); // 1893-04-12
+const START_DATE_CE = Date.UTC(1913, 4 - 1, 13); // 1913-04-13 js months are 0 indexed
 const START_YEAR_BS = CALENDAR[0][0] as number;
 
 export type BikramSambat = {
