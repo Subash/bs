@@ -1,0 +1,22 @@
+{
+  "name": "@sbspk/bs",
+  "version": "9.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
+  },
+  "description": "Convert Bikram Sambat to Common Era and vice versa.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Subash/bs.git"
+  },
+  "author": "Subash Pathak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Subash/bs/issues"
+  },
+  "homepage": "https://github.com/Subash/bs#readme"
+}
